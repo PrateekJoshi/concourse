@@ -1,0 +1,25 @@
+---
+jobs:
+- name: run-grpc
+  serial: true
+  plan:
+  - get: resource-grpc-calculator
+    trigger: true
+  - get: resource-concourse-ci
+    trigger: true
+  - task: compile-source
+    file: resource-concourse-ci/tasks/compile_task.yml
+
+resources:
+- name: resource-grpc-calculator
+  type: git
+  source:
+   uri: https://github.com/PrateekJoshi/grpc_calculator
+   branch: master
+
+- name: resource-concourse-ci
+  type: git
+  source:
+   uri: https://github.com/PrateekJoshi/concourse
+   branch: master
+
