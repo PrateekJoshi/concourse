@@ -8,7 +8,7 @@ jobs:
   - get: resource-concourse-ci
     trigger: true
   - task: compile-source
-    file: resource-concourse-ci/tasks/compile_task.yml
+    file: resource-concourse-ci/pipeline_grpc_calculator/tasks/compile_task.yml
 
 resources:
 - name: resource-grpc-calculator
