@@ -1,0 +1,34 @@
+---
+# YAML config file to deploy all projects using concourse
+groups:
+  - name: web-apps
+    jobs:
+      - deploy-spring-mvc-webapp
+      - deploy-spring-security-webapp
+
+  - name: grpc-based-apps
+    jobs:
+      - deploy-grpc-calculator
+
+resources:
+- name: resource-deployment-repo
+  type: git
+  source:
+    uri: https://github.com/PrateekJoshi/concourse.git
+    branch: master
+
+
+jobs:
+  - name: deploy-spring-mvc-webapp
+    serial: true
+    plan:
+      - get: resource-deployment-repo
+      - task: run-spring-mvc-webapp
+        file: resource-deployment-repo/taks/run-spring-mvc-webapp.yml
+
+
+
+
+  - name: deploy-spring-security-webapp
+
+  - name: deploy-grpc-calculator
