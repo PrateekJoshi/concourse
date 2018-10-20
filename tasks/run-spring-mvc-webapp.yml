@@ -11,4 +11,4 @@ inputs:
  - name: resource-spring-mvc-webapp    
 
 run:
-  path: cat resource-spring-mvc-webapp/pom.xml
+  path: resource-spring-mvc-webapp/build.sh
