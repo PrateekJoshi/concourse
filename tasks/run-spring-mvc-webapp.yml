@@ -7,4 +7,6 @@ image_resource:
     repository: openjdk
     tag: 8
 
-run: mvn --version
+run:
+  path: echo
+  args: [hello world]
