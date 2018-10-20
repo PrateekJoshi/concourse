@@ -24,7 +24,7 @@ jobs:
     plan:
       - get: resource-deployment-repo
       - task: run-spring-mvc-webapp
-        file: resource-deployment-repo/taks/run-spring-mvc-webapp.yml
+        file: resource-deployment-repo/tasks/run-spring-mvc-webapp.yml
 
 
 
