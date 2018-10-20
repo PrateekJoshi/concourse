@@ -14,7 +14,7 @@ resources:
 - name: resource-deployment-repo
   type: git
   source:
-    uri: https://github.com/PrateekJoshi/concourse.git
+    uri: https://github.com/PrateekJoshi/concourse
     branch: master
 
 
