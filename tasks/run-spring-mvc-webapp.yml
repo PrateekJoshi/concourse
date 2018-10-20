@@ -7,6 +7,8 @@ image_resource:
     repository: openjdk
     tag: 8
 
+inputs:
+ - name: resource-spring-mvc-webapp    
+
 run:
-  path: echo
-  args: [hello world]
+  path: cat resource-spring-mvc-webapp/pom.xml

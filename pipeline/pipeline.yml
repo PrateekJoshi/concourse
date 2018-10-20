@@ -17,11 +17,18 @@ resources:
     uri: https://github.com/PrateekJoshi/concourse
     branch: master
 
+- name: resource-spring-mvc-webapp
+  type: git
+  source:
+    uri: https://github.com/PrateekJoshi/spring-mvc-app
+    branch: master
+
 
 jobs:
   - name: deploy-spring-mvc-webapp
     serial: true
     plan:
+      - get: resource-spring-mvc-webapp
       - get: resource-deployment-repo
       - task: run-spring-mvc-webapp
         file: resource-deployment-repo/tasks/run-spring-mvc-webapp.yml
