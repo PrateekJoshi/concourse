@@ -1,5 +1,13 @@
 # concourse
 
+### Running Conspurse
+
+Go to the location where docker-compose.yml if located for Concourse, and run the command 
+
+```
+docker-compose up -d
+```
+
 ### Login in to consourse
 
 ```

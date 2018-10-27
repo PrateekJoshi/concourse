@@ -3,7 +3,8 @@
 ### Login into your org and targerted space
 
 ```
-cf lofin -a <api_endpoint> -u <user_name> -p <password> -o <target_org> -s <target_space>
+cf login -a <api_endpoint> -u <user_name> -p <password> -o <target_org> -s <target_space>
+cf login -a api.run.pivotal.io -u <username/email> -p <password> -o <target_org> -s development
 ``` 
 
 ### List deployed apps
